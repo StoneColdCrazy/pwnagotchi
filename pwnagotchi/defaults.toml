@@ -1,10 +1,6 @@
 main.name = ""
 main.lang = "en"
-main.confd = "/etc/pwnagotchi/conf.d/"
 main.custom_plugins = ""
-main.custom_plugin_repos = [
-  "https://github.com/evilsocket/pwnagotchi-plugins-contrib/archive/master.zip"
-]
 main.iface = "mon0"
 main.mon_start_cmd = "/usr/bin/monstart"
 main.mon_stop_cmd = "/usr/bin/monstop"
@@ -17,6 +13,7 @@ main.whitelist = [
   "fo:od:ba"
 ]
 main.filter = ""
+
 
 main.plugins.grid.enabled = true
 main.plugins.grid.report = false
@@ -40,19 +37,14 @@ main.plugins.webgpsmap.enabled = false
 main.plugins.onlinehashcrack.enabled = false
 main.plugins.onlinehashcrack.email = ""
 main.plugins.onlinehashcrack.dashboard = ""
-main.plugins.onlinehashcrack.single_files = false
-main.plugins.onlinehashcrack.whitelist = []
 
 main.plugins.wpa-sec.enabled = false
 main.plugins.wpa-sec.api_key = ""
 main.plugins.wpa-sec.api_url = "https://wpa-sec.stanev.org"
 main.plugins.wpa-sec.download_results = false
-main.plugins.wpa-sec.whitelist = []
 
 main.plugins.wigle.enabled = false
 main.plugins.wigle.api_key = ""
-main.plugins.wigle.whitelist = []
-main.plugins.wigle.donate = true
 
 main.plugins.bt-tether.enabled = false
 
@@ -113,9 +105,6 @@ main.plugins.led.patterns.epoch = "oo  oo  oo oo  oo  oo  oo"
 main.plugins.led.patterns.peer_detected = "oo  oo  oo oo  oo  oo  oo"
 main.plugins.led.patterns.peer_lost = "oo  oo  oo oo  oo  oo  oo"
 
-main.plugins.logtail.enabled = false
-main.plugins.logtail.max-lines = 10000
-
 main.plugins.session-stats.enabled = true
 main.plugins.session-stats.save_directory = "/var/tmp/pwnagotchi/sessions/"
 
@@ -140,8 +129,8 @@ ai.params.verbose = 1
 ai.params.lr_schedule = "constant"
 
 personality.advertise = true
-personality.deauth = true
-personality.associate = true
+personality.deauth = false
+personality.associate = false
 personality.channels = []
 personality.min_rssi = -200
 personality.ap_ttl = 120
@@ -159,8 +148,6 @@ personality.sad_num_epochs = 25
 personality.bond_encounters_factor = 20000
 
 ui.fps = 0.0
-ui.font.name = "DejaVuSansMono" # for japanese: fonts-japanese-gothic
-ui.font.size_offset = 0 # will be added to the font size
 
 ui.faces.look_r = "( ⚆_⚆)"
 ui.faces.look_l = "(☉_☉ )"
@@ -184,9 +171,6 @@ ui.faces.angry = "(-_-')"
 ui.faces.friend = "(♥‿‿♥)"
 ui.faces.broken = "(☓‿‿☓)"
 ui.faces.debug = "(#__#)"
-ui.faces.upload = "(1__0)"
-ui.faces.upload1 = "(1__1)"
-ui.faces.upload2 = "(0__1)"
 
 ui.web.enabled = true
 ui.web.address = "0.0.0.0"
